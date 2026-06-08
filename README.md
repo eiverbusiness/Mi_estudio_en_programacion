@@ -2,7 +2,7 @@
 
 
 
-# Curso_modulo1
+# Curso_Programacion
 Ejercicios de mi primer modulo como programador
 
 
