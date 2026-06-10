@@ -1,0 +1,68 @@
+* /* universal */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body /* cuerpo */
+{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+.calculadora /* contenedor calculadora */
+{
+    background-color: rgb(3, 3, 109);
+    color: white;
+    width: 750px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+.pantalla /*contenedor de pantalla que es el 0 */
+{
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+    background-color: rgb(14, 14, 116);
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+.btn /* todos los botones */
+{
+    font-size: 1rem;
+    background-color: rgb(3, 3, 87);
+    color: white;
+    border: 0;
+    padding: 1.5rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn:hover /* hover para que cuando pasemos el mouse por encima de los botones se vea distinto*/
+{
+    background-color: rgb(3, 3, 150);
+}
+#cero /* Id cero para aumentar las casillas que va a ocupar en grid y aqui en horizontal*/
+{
+    grid-column: span 2;
+}
+#igual /* Id igual para aumentar las casillas que va a ocupar en grid pero en vertical y cambia el color*/
+{
+    background-color: rgba(167, 54, 1, 0.678);
+    grid-row: span 2;
+}
+#igual:hover /* un hover para igual ver distinto el color de el igual cuando le pasemos el mouse por encima */
+{
+    background-color: brown;
+}
