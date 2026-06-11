@@ -1,0 +1,122 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+body
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+    background-color: black;
+}
+.propuesta
+{
+    border-radius: 2rem;
+    background: linear-gradient(purple, purple, pink);
+    color: white;
+    height: 450px;
+    width: 450px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    margin-top: auto;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.imagen
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+
+}
+.btn
+{   
+    font-size: 1rem;
+    background-color: purple;
+    color: white;
+    border: 0;
+    padding: 1.5rem 5rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+#no
+{
+    position: relative;
+    transition: all 0.15s ease-out;
+    z-index: 10;
+}
+@keyframes moverVertical{
+    0%
+    {
+        transform: translateY(-10px);
+    }
+    100%
+    {
+        transform: translateY(10px);
+    }
+}
+
+.modal-oculto {
+    display: none; 
+}
+
+.modal-visible {
+    display: flex !important; /* Fuerza el diseño flexible */
+    position: fixed !important; /* Se congela en la pantalla, ignora el scroll */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important; /* Cubre el 100% del ancho de la pantalla */
+    height: 100vh !important; /* Cubre el 100% del alto de la pantalla */
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Fondo oscuro para dar contraste */
+    z-index: 999999 !important; /* Número altísimo para que nada la tape */
+    justify-content: center;
+    align-items: center;
+}
+
+/* La cajita blanca flotante donde irá el oso y el confeti */
+.modal-contenido {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+    max-width: 450px;
+    width: 90%;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Controla el tamaño de la imagen/video para que no se desborde */
+.modal-contenido img, 
+.modal-contenido video {
+    max-width: 100%;     /* No permite que sea más ancha que la cajita */
+    height: auto;        /* Mantiene la proporción original sin deformar */
+    border-radius: 10px; /* Le da bordes suaves y estéticos */
+    margin: 15px 0;      /* Separa la imagen del texto arriba y abajo */
+    object-fit: contain; /* Asegura que la imagen encaje perfecta */
+}
+
+
+#si:hover
+{
+    background-color: darkmagenta;
+}
+#no:hover
+{
+    background-color: darkmagenta;
+}
